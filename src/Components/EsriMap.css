@@ -1,0 +1,194 @@
+@import "https://js.arcgis.com/4.26/@arcgis/core/assets/esri/themes/light/main.css";
+@import "@arcgis/core/assets/esri/themes/light/main.css";
+
+.viewDiv {
+    height: 500px;
+    width: 1000px;
+    padding: 20px;
+}
+
+/* closed source js file css style */
+
+/* Start page-title */
+/* .title, */
+.home-closed,
+.home-open {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    bottom: 0;
+    top: 0;
+}
+
+/* .title:hover span, */
+.home-closed span,
+.home-open span {
+    display: inline-block;
+    color: transparent;
+    text-shadow: 0px 0px 0px #0D6EFD;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+/* .title span:nth-child(1), */
+.home-closed span:nth-child(1),
+.home-open span:nth-child(1) {
+    animation-name: disappearleft;
+}
+
+/* .title span:nth-child(2), */
+.home-closed span:nth-child(2),
+.home-open span:nth-child(2) {
+    animation-name: disappearleft;
+    animation-delay: .5s;
+}
+
+/* .title span:nth-child(3), */
+.home-closed span:nth-child(3),
+.home-open span:nth-child(3) {
+    animation-name: disappearight;
+    animation-delay: .8s;
+}
+
+/* .title span:nth-child(4), */
+.home-closed span:nth-child(4),
+.home-open span:nth-child(4) {
+    animation-name: disappearight;
+    animation-delay: 1s;
+}
+
+/* .title span:nth-child(5), */
+.home-closed span:nth-child(5) {
+    animation-name: disappearight;
+    animation-delay: 1.2s;
+}
+
+.home-closed span:nth-child(6) {
+    animation-name: disappearight;
+    animation-delay: 1.4s;
+}
+
+@keyframes disappearleft {
+    50% {
+        transform: skew(50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes disappearight {
+    50% {
+        transform: skew(-50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
+}
+
+/* End page-title */
+
+.title {
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    -webkit-background-clip: text;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 18px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Sart Closed & Open Title Style*/
+.closed-title,
+.open-title {
+    text-align: center;
+}
+
+.closed-title .home-closed,
+.open-title .home-open {
+    position: relative;
+    text-align: center;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Sart Closed & Open Title  Style*/
+
+.page-title {
+    position: relative;
+    text-align: center;
+}
+
+.page-title .title {
+    padding-bottom: 3px;
+    font-size: 28px;
+}
+
+.closed-title .home-closed::after,
+.open-title .home-open::after,
+.page-title .title::after {
+    content: " ";
+    position: absolute;
+    width: 140px;
+    height: 2px;
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+    background-color: #333;
+}
+
+.page-title .title::after {
+    background-color: #0D6EFD;
+    width: 60px;
+    bottom: 1px;
+}
+
+.clos-data {
+    text-align: center;
+}
+
+.clos-data .arcserver .arcserver-inpu,
+.clos-data .geojson .geojson-inpu {
+    width: 500px;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.clos-data .arcserver {
+    margin-bottom: 15px;
+}
+
+.clos-data .geojson #loadButton,
+.clos-data .arcserver #loadServerDataButton {
+    padding: 7px;
+    font-size: 18px;
+    margin-left: 8px;
+    border-radius: 6px;
+}
+
+.clos-data .clear #clr-btn {
+    padding: 6px 8px;
+    font-size: 18px;
+    margin: 15px 0;
+    border-radius: 6px;
+}

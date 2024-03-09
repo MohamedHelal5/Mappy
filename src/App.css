@@ -1,0 +1,41 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.side {
+  background-color: #f7f7f7;
+}
+
+/* Sidebar CSS Style */
+
+.side .open,
+.side .closed {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.side .open a,
+.side .closed a {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.side .footer {
+  text-align: center;
+  margin-top: 300px;
+  font-size: 16px;
+  color: #0D6EFD;
+}
+
+.side .footer .job {
+  padding-top: 8px;
+}
+
+/* Sidebar CSS Style */
